@@ -29,11 +29,33 @@
         <setting id="dim_time" label="2101" type="slider" default="4" range="0,0.5,10" option="float" />
         <setting id="proportional_dim_time" label="2102" type="bool" default="true" />
         <setting id="propritional_explainer" type="lsep" label="2103" visible="eq(-1,true)" subsetting="true" />
+        <setting id="light" type="enum" enable="true" label="1301" default="1" lvalues="1302|1303|1304|1305" visible="false" />
+        <setting id="individual_dim" label="2109" type="bool" default="false" enable="gt(-1,1)" visible="gt(-1, 1)" />
+        <!--All lights/Light1-->
+        <setting type="lsep" label="1306" visible="eq(-1,true)" />
+        <setting id="light1_id" type="number" label="1306" default="1" enable="false" visible="eq(-2,true)" />
         <setting id="dimmed_bri" label="2104" type="slider" default="0" range="0,5,100" option="int" />
         <setting id="override_undim_bri" type="bool" label="2105" default="false" />
         <setting id="undim_bri" label="2106" type="slider" visible="eq(-1,true)" default="100" range="0,5,100" option="int" />
         <setting id="override_paused" type="bool" label="2107" default="true" />
         <setting id="paused_bri" label="2108" type="slider" visible="eq(-1,true)" default="30" range="0,5,100" option="int" />
+        <!--Light2-->
+        <setting type="lsep" label="1307" visible="eq(-8,true)" />
+        <setting id="light2_id" type="number" label="1307" default="2" enable="false" visible="eq(-9,true)" />
+        <setting id="dimmed_bri2" label="2104" type="slider" visible="eq(-10,true)" default="0" range="0,5,100" option="int" />
+        <setting id="override_undim_bri2" type="bool" label="2105" visible="eq(-11,true)" default="false" />
+        <setting id="undim_bri2" label="2106" type="slider" visible="eq(-1,true) + eq(-12,true)" default="100" range="0,5,100" option="int" />
+        <setting id="override_paused2" type="bool" label="2107" visible="eq(-13,true)" default="true" />
+        <setting id="paused_bri2" label="2108" type="slider" visible="eq(-1,true) + eq(-14,true)" default="30" range="0,5,100" option="int" />
+        <!--Light3-->
+        <setting type="lsep" label="1308" visible="eq(-15,true) + gt(-16,2)" />
+        <setting id="light3_id" type="number" label="1308" default="3" enable="false" visible="eq(-16,true) + gt(-17,2)" />
+        <setting id="dimmed_bri3" label="2104" type="slider" visible="eq(-17,true) + gt(-18,2)" default="0" range="0,5,100" option="int" />
+        <setting id="override_undim_bri3" type="bool" label="2105" visible="eq(-18,true) + gt(-19,2)" default="false" />
+        <setting id="undim_bri3" label="2106" type="slider" visible="eq(-1,true) + eq(-19,true) + gt(-20,2)" default="100" range="0,5,100" option="int" />
+        <setting id="override_paused3" type="bool" label="2107" visible="eq(-20,true) + gt(-21,2)" default="true" />
+        <setting id="paused_bri3" label="2108" type="slider" visible="eq(-1,true) + eq(-21,true) + gt(-22,2)" default="30" range="0,5,100" option="int" />
+
         <!--Color-->
         <setting type="lsep" label="2200" />
         <setting id="override_hue" type="bool" label="2201" default="false" />
